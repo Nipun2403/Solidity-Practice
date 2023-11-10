@@ -17,16 +17,7 @@ const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "key";
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: {
-    compilers: [
-      {
-        version: "0.7.0",
-      },
-      {
-        version: "0.8.8",
-      },
-    ],
-  },
+  solidity: "0.8.18",
   defaultNetwork: "hardhat",
   networks: {
     sepolia: {
@@ -49,11 +40,11 @@ module.exports = {
     apiKey: ETHERSCAN_API_KEY,
   },
   gasReporter: {
-    enabled: true,
+    enabled: false,
     outputFile: "gas-report.txt",
     noColors: true,
     currency: "USD",
-    // coinmarketcap: COINMARKETCAP_API_KEY,
+    coinmarketcap: COINMARKETCAP_API_KEY,
   },
   namedAccounts: {
     deployer: {

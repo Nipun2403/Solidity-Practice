@@ -25,7 +25,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   const args = [ethUsdPriceFeedAddress];
 
   // If the contract doesn't exist, we deploy a minimal mock version of that contract for local testing
-  const fundMe = await deploy("FundMe", {
+  const fundMe = await deploy("fundme", {
     from: deployer,
     args: args,
     log: true,
